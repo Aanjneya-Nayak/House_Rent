@@ -1,0 +1,106 @@
+.navbar-custom {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 1rem 0;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-bottom: 1px solid rgba(224, 224, 224, 0.3);
+}
+
+.navbar-custom.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem 0;
+}
+
+.brand-logo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: #0b1c2d !important;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.02em;
+}
+
+.brand-logo:hover {
+  color: #c6a75e !important;
+  transform: scale(1.02);
+}
+
+.navbar-custom .nav-link {
+  font-weight: 500;
+  color: #0b1c2d !important;
+  position: relative;
+  margin: 0 1rem;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-custom .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #c6a75e, #4a90e2);
+  transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-custom .nav-link:hover {
+  color: #c6a75e !important;
+}
+
+.navbar-custom .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-custom .nav-link.active {
+  color: #c6a75e !important;
+}
+
+.navbar-custom .nav-link.active::after {
+  width: 100%;
+}
+
+.btn-list-property {
+  background: linear-gradient(135deg, #0b1c2d 0%, #1a3a52 100%);
+  color: white !important;
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+.btn-list-property:hover {
+  box-shadow: 0 8px 20px rgba(11, 28, 45, 0.25);
+  transform: translateY(-2px);
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0;
+  color: #0b1c2d;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+@media (max-width: 991px) {
+  .navbar-custom .nav-link {
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+  }
+  
+  .navbar-custom .nav-link::after {
+    display: none;
+  }
+}

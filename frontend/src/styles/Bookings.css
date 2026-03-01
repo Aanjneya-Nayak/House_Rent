@@ -1,0 +1,19 @@
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.booking-details {
+  font-size: 0.9rem;
+}
+
+.booking-details p {
+  margin-bottom: 0.5rem;
+}
+
+.booking-actions {
+  margin-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 1rem;
+}
