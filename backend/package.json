@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "postinstall": "cd ../frontend && npm install && npm run build && cd ../backend && rm -rf public && cp -r ../frontend/build ./public || true"
+    "build:frontend": "cd ../frontend && npm install && npm run build",
+    "copy:frontend": "rm -rf ./public && mkdir -p ./public && cp -r ../frontend/build/* ./public/"
   },
   "keywords": [
     "mern",

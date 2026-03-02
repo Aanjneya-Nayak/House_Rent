@@ -5,7 +5,7 @@ Deploy your entire House Rent app (frontend + backend) as a **single Web Service
 ## ✅ Advantages
 
 - **Cheaper**: 1 Web Service instead of 1 Web Service + 1 Static Site
-- **Simpler**: Single deployment, no CORS complexity  
+- **Simpler**: Single deployment, no CORS complexity
 - **Faster**: Same origin, no cross-domain requests
 - **Auto-builds**: Frontend builds automatically during deployment
 
@@ -39,28 +39,28 @@ git push origin main
 
 Fill in these values **exactly**:
 
-| Field | Value |
-|-------|-------|
-| **Name** | `house-rent-app` |
-| **Environment** | `Node` |
-| **Region** | `Oregon` (or closest) |
-| **Branch** | `main` |
-| **Build Command** | `npm install` |
-| **Start Command** | `npm start` |
-| **Root Directory** | `backend` |
+| Field              | Value                 |
+| ------------------ | --------------------- |
+| **Name**           | `house-rent-app`      |
+| **Environment**    | `Node`                |
+| **Region**         | `Oregon` (or closest) |
+| **Branch**         | `main`                |
+| **Build Command**  | `npm install`         |
+| **Start Command**  | `npm start`           |
+| **Root Directory** | `backend`             |
 
 ### Step 5: Add Environment Variables
 
 Click **"Environment"** section. Add each variable below:
 
-| Key | Value |
-|-----|-------|
+| Key           | Value                                                                                                       |
+| ------------- | ----------------------------------------------------------------------------------------------------------- |
 | `MONGODB_URI` | `mongodb+srv://aanjneya2428cseai15_db_user:1nygpJYf4zU1jYfL@cluster0.3nszsqd.mongodb.net/?appName=Cluster0` |
-| `JWT_SECRET` | Paste your JWT secret from Step 1 |
-| `JWT_EXPIRE` | `7d` |
-| `NODE_ENV` | `production` |
-| `CORS_ORIGIN` | `https://house-rent-app.onrender.com` |
-| `PORT` | `5000` |
+| `JWT_SECRET`  | Paste your JWT secret from Step 1                                                                           |
+| `JWT_EXPIRE`  | `7d`                                                                                                        |
+| `NODE_ENV`    | `production`                                                                                                |
+| `CORS_ORIGIN` | `https://house-rent-app.onrender.com`                                                                       |
+| `PORT`        | `5000`                                                                                                      |
 
 **Click outside each input to save it.**
 
@@ -69,6 +69,7 @@ Click **"Environment"** section. Add each variable below:
 Click **"Create Web Service"**
 
 ⏳ **Wait 12-15 minutes** for:
+
 1. Frontend to build
 2. Frontend to copy to backend
 3. Backend to install and start
@@ -76,6 +77,7 @@ Click **"Create Web Service"**
 Watch the logs for progress.
 
 When complete, you'll see a URL like:
+
 ```
 https://house-rent-app.onrender.com
 ```
@@ -85,11 +87,13 @@ https://house-rent-app.onrender.com
 #### Test Backend API
 
 Open in browser:
+
 ```
 https://house-rent-app.onrender.com/api/health
 ```
 
 Expected response:
+
 ```json
 {
   "success": true,
@@ -100,6 +104,7 @@ Expected response:
 #### Test Frontend
 
 Open in browser:
+
 ```
 https://house-rent-app.onrender.com
 ```
@@ -111,10 +116,12 @@ You should see the House Rent homepage with property listings.
 Click **"Login"** and use:
 
 **Admin:**
+
 - Email: `admin@example.com`
 - Password: `admin123`
 
 **User:**
+
 - Email: `jane@example.com`
 - Password: `password123`
 
@@ -148,18 +155,22 @@ All future pushes to `main` auto-deploy!
 ## Troubleshooting
 
 **Build takes too long:**
+
 - First build installs all dependencies, subsequent builds are cached and faster
 - Check logs in Render dashboard
 
 **"Cannot find public folder":**
+
 - Make sure postinstall script completed
 - Check Render logs for build errors
 
 **Images not showing:**
+
 - They're from Unsplash URLs, should work automatically
 - Check browser console for 404 errors
 
 **Database connection error:**
+
 - Verify MongoDB Atlas connection string in environment variables
 - Check IP whitelist in MongoDB Atlas
 

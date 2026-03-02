@@ -5,18 +5,12 @@ services:
     region: oregon
     plan: starter
     branch: main
+    rootDir: backend
     buildCommand: >
-      cd frontend && npm install && npm run build &&
-      cd ../backend && npm install &&
-      rm -rf public && cp -r ../frontend/build ./public
-    startCommand: npm start
-    oneDeploy:
-      specs:
-        - type: web
-          envVars:
-            - key: NODE_ENV
-              value: production
-            - key: MONGODB_URI
-              fromDatabase:
-                name: mongodb
-                property: connectionString
+      npm install &&
+      cd ../frontend && npm install && npm run build &&
+      cd ../backend && rm -rf ./public && mkdir -p ./public && cp -r ../frontend/build/* ./public/
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
