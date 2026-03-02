@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: house-rent-app
+    env: node
+    region: oregon
+    plan: starter
+    branch: main
+    buildCommand: >
+      cd frontend && npm install && npm run build &&
+      cd ../backend && npm install &&
+      rm -rf public && cp -r ../frontend/build ./public
+    startCommand: npm start
+    oneDeploy:
+      specs:
+        - type: web
+          envVars:
+            - key: NODE_ENV
+              value: production
+            - key: MONGODB_URI
+              fromDatabase:
+                name: mongodb
+                property: connectionString

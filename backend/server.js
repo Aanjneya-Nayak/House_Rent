@@ -36,6 +36,10 @@ app.use(
   }),
 );
 
+// Serve static files from frontend build (for unified deployment)
+const frontendBuildPath = path.join(__dirname, "./public");
+app.use(express.static(frontendBuildPath));
+
 // API Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/properties", propertyRoutes);
@@ -52,7 +56,12 @@ app.get("/api/health", (req, res) => {
   });
 });
 
-// 404 handler
+// Serve React app for all non-API routes (React Router support)
+app.get("*", (req, res) => {
+  res.sendFile(path.join(frontendBuildPath, "index.html"));
+});
+
+// 404 handler (fallback)
 app.use((req, res) => {
   res.status(404).json({
     success: false,
