@@ -5,15 +5,20 @@
 }
 
 footer {
-  background-color: #2c3e50;
-  color: white;
-  padding: 2rem 0;
+  background-color: #1a2836;
+  color: #ecf0f1;
+  padding: 3rem 0 1rem 0;
   margin-top: auto;
+  border-top: 1px solid rgba(198, 167, 94, 0.2);
 }
 
 footer h5 {
-  font-weight: bold;
-  margin-bottom: 1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #c6a75e;
+  font-family: 'Garamond', serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
 }
 
 footer a {

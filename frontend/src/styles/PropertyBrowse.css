@@ -1,54 +1,58 @@
 .property-browse-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f8f8f8 0%, #f5f5f5 100%);
-  padding: 60px 0;
+  background: linear-gradient(135deg, #fafcfd 0%, #f5f8fc 100%);
+  padding: 70px 0;
 }
 
 .property-browse-container h1 {
-  font-family: 'Playfair Display', serif;
-  color: #0b1c2d;
+  font-family: 'Garamond', 'Georgia', serif;
+  color: #1a2836;
   font-weight: 700;
-  margin-bottom: 40px;
-  font-size: 40px;
+  margin-bottom: 50px;
+  font-size: 44px;
+  font-style: italic;
+  letter-spacing: -0.01em;
 }
 
 .filters-section {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .filter-card {
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  border: 1px solid #e0e0e0;
-  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(198, 167, 94, 0.2);
+  padding: 36px;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-card:hover {
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 28px rgba(198, 167, 94, 0.15);
+  border-color: rgba(198, 167, 94, 0.4);
 }
 
 .filter-card h5 {
-  font-family: 'Playfair Display', serif;
-  font-size: 18px;
-  color: #0b1c2d;
-  margin-bottom: 20px;
+  font-family: 'Garamond', 'Georgia', serif;
+  font-size: 20px;
+  color: #1a2836;
+  margin-bottom: 24px;
   font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .filter-group {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .filter-group label {
   display: block;
   font-weight: 600;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #0b1c2d;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: #2c3e50;
   margin-bottom: 10px;
+  font-family: 'Garamond', serif;
 }
 
 .filter-group input,
@@ -59,19 +63,20 @@
   border-radius: 8px;
   font-size: 14px;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  font-family: inherit;
+  font-family: 'Garamond', serif;
 }
 
 .filter-group input:hover,
 .filter-group select:hover {
-  border-color: #4a90e2;
+  border-color: #c6a75e;
 }
 
 .filter-group input:focus,
 .filter-group select:focus {
   outline: none;
-  border-color: #4a90e2;
-  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+  border-color: #c6a75e;
+  box-shadow: 0 0 0 3px rgba(198, 167, 94, 0.1);
+  background-color: #fffef5;
 }
 
 .filter-button {

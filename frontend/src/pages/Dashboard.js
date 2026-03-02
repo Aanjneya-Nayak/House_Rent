@@ -10,13 +10,14 @@ import {
   Badge,
   Alert,
 } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { propertyService } from "../services/api";
 import "../styles/Dashboard.css";
 
 const Dashboard = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
   const [userProperties, setUserProperties] = useState([]);
   const [loadingProperties, setLoadingProperties] = useState(true);
 
@@ -26,9 +27,10 @@ const Dashboard = () => {
     if (!isAdmin) {
       fetchUserProperties();
     }
-  }, []);
+  }, [location.pathname, isAdmin, user?._id]);
 
   const fetchUserProperties = async () => {
+    if (!user?._id) return;
     try {
       setLoadingProperties(true);
       const res = await propertyService.getUserProperties(user._id);

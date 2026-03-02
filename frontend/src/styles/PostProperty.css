@@ -5,7 +5,7 @@
 
 .post-property-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--neutral-light-gray) 0%, var(--neutral-off-white) 100%);
+  background: linear-gradient(135deg, #f5f8fc 0%, #fafcfd 100%);
   padding: var(--spacing-2xl) var(--spacing-md);
 }
 
@@ -19,33 +19,35 @@
   margin: 0 auto;
   background: var(--neutral-white);
   border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   animation: fadeInUp 0.4s ease-out;
+  border: 1px solid rgba(198, 167, 94, 0.2);
 }
 
 .property-form-header {
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
+  background: linear-gradient(135deg, #1a2836 0%, #2d4563 100%);
   padding: var(--spacing-3xl) var(--spacing-2xl);
   text-align: center;
 }
 
 .property-form-header h1,
 .property-form-header .form-title {
-  font-family: var(--font-serif);
+  font-family: 'Garamond', 'Georgia', serif;
   font-size: var(--text-4xl);
-  font-weight: var(--fw-bold);
+  font-weight: 700;
   color: var(--neutral-white);
   margin: 0;
   letter-spacing: -0.01em;
+  font-style: italic;
 }
 
 .property-form-header p {
   font-size: var(--text-sm);
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.85);
   margin: var(--spacing-sm) 0 0 0;
-  letter-spacing: 0.05em;
-  text-transform: capitalize;
+  letter-spacing: 0.02em;
+  font-family: 'Garamond', serif;
 }
 
 .property-form-body {

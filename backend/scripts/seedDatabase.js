@@ -105,8 +105,8 @@ const seedDatabase = async () => {
         propertyType: "apartment",
         availableFrom: new Date("2026-03-01"),
         images: [
-          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=500",
-          "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500",
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&h=400&fit=crop",
+          "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop",
         ],
         amenities: ["wifi", "gym", "parking", "air-conditioning", "furnished"],
         rating: 4.5,
@@ -132,7 +132,7 @@ const seedDatabase = async () => {
         propertyType: "apartment",
         availableFrom: new Date("2026-03-10"),
         images: [
-          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=500",
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&h=400&fit=crop",
         ],
         amenities: ["wifi", "parking", "laundry"],
         rating: 4.2,
@@ -158,8 +158,8 @@ const seedDatabase = async () => {
         propertyType: "villa",
         availableFrom: new Date("2026-03-05"),
         images: [
-          "https://images.unsplash.com/photo-1512917774080-9b274b3b313a?w=500",
-          "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500",
+          "https://images.unsplash.com/photo-1512917774080-9b274b3b313a?w=600&h=400&fit=crop",
+          "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop",
         ],
         amenities: [
           "wifi",
@@ -193,7 +193,7 @@ const seedDatabase = async () => {
         propertyType: "house",
         availableFrom: new Date("2026-04-01"),
         images: [
-          "https://images.unsplash.com/photo-1570129477492-45a003537e1f?w=500",
+          "https://images.unsplash.com/photo-1570129477492-45a003537e1f?w=600&h=400&fit=crop",
         ],
         amenities: ["wifi", "parking", "garden", "furnished"],
         rating: 4.6,
@@ -219,7 +219,7 @@ const seedDatabase = async () => {
         propertyType: "condo",
         availableFrom: new Date("2026-03-15"),
         images: [
-          "https://images.unsplash.com/photo-1536376072261-38c75010e6c9?w=500",
+          "https://images.unsplash.com/photo-1536376072261-38c75010e6c9?w=600&h=400&fit=crop",
         ],
         amenities: ["wifi", "parking", "pet-friendly", "air-conditioning"],
         rating: 4.4,
@@ -245,7 +245,7 @@ const seedDatabase = async () => {
         propertyType: "apartment",
         availableFrom: new Date("2026-03-20"),
         images: [
-          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=500",
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&h=400&fit=crop",
         ],
         amenities: ["wifi", "gym", "parking", "furnished"],
         rating: 4.3,
@@ -271,7 +271,7 @@ const seedDatabase = async () => {
         propertyType: "townhouse",
         availableFrom: new Date("2026-04-15"),
         images: [
-          "https://images.unsplash.com/photo-1493857671505-72967e2e2760?w=500",
+          "https://images.unsplash.com/photo-1493857671505-72967e2e2760?w=600&h=400&fit=crop",
         ],
         amenities: ["wifi", "air-conditioning", "furnished"],
         rating: 0,
