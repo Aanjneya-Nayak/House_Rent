@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const path = require("path");
-const fs = require("fs");
 
 // Load environment variables
 dotenv.config();
@@ -37,14 +36,6 @@ app.use(
   }),
 );
 
-// Serve static files from frontend build (for unified deployment)
-const frontendBuildPath = path.join(__dirname, "./public");
-// Create public directory if it doesn't exist
-if (!fs.existsSync(frontendBuildPath)) {
-  fs.mkdirSync(frontendBuildPath, { recursive: true });
-}
-app.use(express.static(frontendBuildPath));
-
 // API Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/properties", propertyRoutes);
@@ -61,20 +52,7 @@ app.get("/api/health", (req, res) => {
   });
 });
 
-// Serve React app for all non-API routes (React Router support)
-const indexPath = path.join(frontendBuildPath, "index.html");
-app.get("*", (req, res) => {
-  if (fs.existsSync(indexPath)) {
-    res.sendFile(indexPath);
-  } else {
-    res.status(200).json({
-      success: true,
-      message: "Backend API is running. Frontend will be available once built.",
-    });
-  }
-});
-
-// 404 handler (fallback)
+// 404 handler
 app.use((req, res) => {
   res.status(404).json({
     success: false,
@@ -89,8 +67,6 @@ app.use(errorHandler);
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-  console.log(`Frontend build path: ${frontendBuildPath}`);
-  console.log(`Frontend exists: ${fs.existsSync(indexPath)}`);
 });
 
 module.exports = app;
