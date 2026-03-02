@@ -103,9 +103,10 @@ const PostProperty = () => {
         "Property posted successfully! Your listing is now live and visible to renters.",
       );
 
+      // Wait a bit then navigate to dashboard
       setTimeout(() => {
-        navigate("/dashboard");
-      }, 2000);
+        navigate("/dashboard", { state: { refresh: true } });
+      }, 1500);
     } catch (err) {
       setError(err.response?.data?.message || "Failed to post property");
     } finally {
